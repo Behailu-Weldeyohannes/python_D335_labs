@@ -1,4 +1,4 @@
-
+"""
 #  ************* Branching ***************
 
 #  Remove gray from RGB
@@ -202,3 +202,77 @@ if 0 <= num <= 9999:
     else:
         print(f"{num_digit} digit")
     
+      
+#  phrases and subphrases
+# Read two phrases
+phrase1 = input()
+phrase2 = input()
+
+# Check for conditions and output the result
+if phrase1 in phrase2:
+    print(f'{phrase1} is found within {phrase2}')
+elif phrase2 in phrase1:
+    print(f'{phrase2} is found within {phrase1}')
+elif phrase1 == phrase2:
+    print('Both phrases match')
+else:
+    print('No matches')
+
+     
+#  count odd numbers
+# Type your code here.
+
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+num4 = int(input())
+
+count_odd = 0
+
+if num1 % 2 != 0:
+    count_odd += 1
+if num2 % 2 != 0:
+    count_odd += 1
+if num3 % 2 != 0:
+    count_odd += 1
+if num4 % 2 != 0:
+    count_odd += 1
+
+print(count_odd)
+
+#  alphabetical order(chars)
+
+char1 = input().lower()
+char2 = input().lower()
+char3 = input().lower()
+
+# print(*sorted([char1,char2, char3])) # option one
+#  option 2
+
+if char1 <=char2 <= char3:
+    print(char1, char2, char3)
+elif char1<=char3<=char2:
+    print(char1, char3, char2)
+elif char2<=char1<=char3:
+    print(char2, char1, char3)
+elif char2<=char3<=char1:
+    print(char2, char3, char1)
+elif char3<=char1<=char2:
+    print(char3, char1, char2)
+else:
+    print(char3, char2, char1)
+    
+
+#  Comparing floats
+
+float1 = float(input())
+float2 = float(input())
+epsilon = float(input())
+
+if abs(float1 - float2) < 0.001:
+    print("equal")
+elif abs(float1-float2) < epsilon:
+    print("close enough")
+else:
+    print("not close")
+ """
