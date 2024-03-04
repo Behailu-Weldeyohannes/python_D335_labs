@@ -368,7 +368,158 @@ while input != 1:
     if count % 10 == 0:
         print()
 print(1, end='\t')
-     """
+    
+
+low = int(input())
+high = int(input())
+x = int(input())
+num_of_multiply = 0
+
+for num in range(low, high + 1):
+    if num % x == 0:
+        num_of_multiply = num_of_multiply + 1
+print(num_of_multiply)
+
+#  find the largest num
+
+largest = 0
+while True:
+    int_num = int(input())
+    if int_num < 0:
+        break
+    if int_num > largest:
+        largest = int_num
+print(largest)
+
+
+#  read input
+num = int(input())
+count = 0
+
+#  process and print the hailstone sequence
+while num != 1:
+    print(num, end='\t')
+    if num % 2 == 0:
+        num = num // 2
+    else:
+        num = 3 * num + 1
+    count += 1
+# print new line every 10 number
+    if count % 10 == 0:
+        print()
+#  print the last number(1)
+print (num)
+
+
+#  numbers in reverse
+
+int_list = []
+
+while True:
+    num = input()
+    if num == "*":
+        break
+    int_list.append(int(num))
+
+while int_list:
+    print(int_list.pop(), end='')
+    if int_list:
+        print(",", end="")
+print()
+
+ 
+#  Output values in a list below a user defined amount
+num_int = int(input())
+# print(f"I'm the first integer{num_int}")
+
+int_list = [int(input()) for num in range(num_int)]
+
+print(f"I am the second{int_list}")
+
+threshold = int(input())
+print(f"I am threshold{threshold}")
+
+output = [str(num) +"," for num in int_list if num <= threshold]
+print(f"I am output {output}")
+
+print("".join(output))
+
+integer_list = [int(input()) for _ in range(num_int)]
+
+print(integer_list)
+
+first_int = int(input())
+# first_int = 5
+
+int_list = [int(input()) for num in range(first_int)]
+print(int_list)
+threshold = int(input())
+print(threshold)
+
+less_threshold = [str(num) + "," for num in int_list if num < threshold]
+print(less_threshold)
+print("".join(less_threshold))
+
+#  Draw upside down triangle
+height = int(input())
+
+for i in range(height, 0, -1):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+#  Draw right-justified triangle
+# Get user input for the height
+height = int(input())
+
+height = int(input())
+for i in range(1, height + 1):
+    total_space = height - i
+    print(" " * total_space, end="")
+    print("* " * i)
+
+#   Matching strings
+str_a = input()
+str_b = input()
+
+count = 0
+
+for c1, c2 in zip(str_a, str_b):
+    if c1 == c2:
+        count = count + 1
+
+if count == 1:
+    print(f"{count} character matches")
+else:
+    print(f"{count} characters match")
+
+#  Months until payoff
+loan_amount = float(input())
+payment_amount = float(input())
+interest_rate = float(input())
+
+current_balance = loan_amount
+num_payments = 0
+
+while current_balance > 0:
+    current_balance = current_balance * (1 + interest_rate)
+    current_balance = current_balance - payment_amount
+    num_payments = num_payments + 1
+
+if num_payments > 1:
+    print(f"{num_payments:.1f} payments")
+else:
+    print(f"{num_payments:.1f} payment")
+    """
+
+
+
+
+
+
+
+
+
+  
 
 
 

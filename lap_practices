@@ -1,0 +1,18 @@
+"""
+A problem can be broken down into 4 components:
+input: any data that is needed to solve the problem
+output the end result of the problem
+storage variable that stores data or values to perform task
+"""
+"""
+#  input
+hours = int(input())
+minutes = int(input())
+seconds = int(input())
+
+total_seconds = (hours * 3600) + (minutes * 60) + seconds 
+
+print(f"Seconds: {total_seconds}")
+print("seconds: {}".format(total_seconds))#  older version
+"""
+
