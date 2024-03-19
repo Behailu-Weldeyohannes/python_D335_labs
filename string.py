@@ -265,6 +265,35 @@ while user_input.lower() != 'q':
         # Report an error if the input string does not contain a comma
         print("Error: No comma in string.")
         """
+#  Data visualization
+title = input("Enter a title for the data:\n")
+print("You entered:", title)
+#  headers for the table
+column1_header = input("Enter the column 1 header:\n")
+print("You entered:", column1_header)
+column2_header = input("Enter the column 2 header:\n")
+print("You entered:", column2_header)
+
+#  data points and store in list
+
+data_strings = []
+data_integers = []
+
+while True:
+    data_point = input("Enter a data point (-1 to stop input):\n")
+    if data_point == "-1":
+        break
+    if "," not in data_point:
+        print("Error: No comma in string.")
+        continue
+    if data_point.count(',') > 1:
+        print("Error: Too many commas in input.")
+        continue
+
+
+
+
+
 
 
 
